@@ -1,0 +1,16 @@
+{
+  "functions": {
+    "app/api/**/*.ts": {
+      "runtime": "@vercel/node"
+    }
+  },
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": ".next"
+      }
+    }
+  ]
+}

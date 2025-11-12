@@ -1,36 +1,58 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Portfolio de Miguel Casares Moreno
 
-## Getting Started
+Este es el portfolio profesional de Miguel Casares Moreno, Business Analyst y Data Analytics Specialist.
 
-First, run the development server:
+## 🚀 Tecnologías Utilizadas
+
+- **Next.js 16** - Framework de React para producción
+- **TypeScript** - Tipado estático para JavaScript
+- **Tailwind CSS** - Framework de CSS utilitario
+- **Framer Motion** - Librería de animaciones para React
+- **Lucide React** - Iconos modernos para React
+- **shadcn/ui** - Componentes de UI reutilizables
+
+## 📦 Instalación
 
 ```bash
+# Instalar dependencias
+npm install
+
+# Ejecutar en modo desarrollo
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+# Construir para producción
+npm run build
+
+# Iniciar en modo producción
+npm start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🌐 Despliegue en Vercel
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Este proyecto está optimizado para desplegarse en Vercel:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. Conecta tu repositorio de GitHub a Vercel
+2. Configura las variables de entorno si es necesario
+3. ¡Vercel se encargará del resto!
 
-## Learn More
+El proyecto utiliza las mejores prácticas de Next.js para un despliegue sin problemas.
 
-To learn more about Next.js, take a look at the following resources:
+## 📱 Características
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- ✅ Diseño responsive y moderno
+- ✅ Animaciones fluidas con Framer Motion
+- ✅ Componentes reutilizables con shadcn/ui
+- ✅ Optimizado para SEO
+- ✅ Carga rápida y optimizada
+- ✅ Accesibilidad mejorada
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 📞 Contacto
 
-## Deploy on Vercel
+- **Email**: miguelcasares01@gmail.com
+- **Teléfono**: +34 673 45 04 27
+- **LinkedIn**: [Miguel Casares](https://www.linkedin.com/in/miguelcasares)
+- **Ubicación**: Granada, España
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+© 2024 Miguel Casares Moreno • Diseñado con pasión para crear impacto
