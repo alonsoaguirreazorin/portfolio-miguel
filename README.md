@@ -56,12 +56,16 @@ El proyecto utiliza las mejores prácticas de Next.js para un despliegue sin pro
 
 ## 📱 Características
 
-- ✅ Diseño responsive y moderno
-- ✅ Animaciones fluidas con Framer Motion
-- ✅ Componentes reutilizables con shadcn/ui
-- ✅ Optimizado para SEO
-- ✅ Carga rápida y optimizada
-- ✅ Accesibilidad mejorada
+## 🚀 Características
+
+- ✨ **Diseño moderno y responsive** con Tailwind CSS
+- 🎨 **Esquema de colores profesional** (púrpura-azul)
+- 📱 **Menú hamburguesa** para dispositivos móviles
+- 🖼️ **Imagen de perfil real** optimizada con Next.js Image
+- 📊 **Secciones especializadas**: Experiencia, Habilidades técnicas, Contacto
+- ⚡ **Rendimiento optimizado** para carga rápida
+- 🌐 **SEO-friendly** con meta tags apropiados
+- 📈 **Información real del CV** integrada
 
 ## 📞 Contacto
 
