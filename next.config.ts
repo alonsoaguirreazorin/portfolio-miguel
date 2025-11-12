@@ -1,11 +1,14 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
-  reactCompiler: true,
+  images: {
+    remotePatterns: [],
+    dangerouslyAllowSVG: true,
+  },
   experimental: {
-    optimizePackageImports: ['framer-motion', 'lucide-react']
-  }
+    optimizePackageImports: ['lucide-react']
+  },
+  output: 'standalone'
 };
 
 export default nextConfig;
