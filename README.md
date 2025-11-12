@@ -1,15 +1,32 @@
-# Portfolio de Miguel Casares Moreno
+# 🚀 Portfolio de Miguel Casares Moreno
 
-Este es el portfolio profesional de Miguel Casares Moreno, Business Analyst y Data Analytics Specialist.
+Portfolio profesional de **Miguel Casares Moreno** - Business Analyst & Data Analytics Specialist especializado en Power BI, Excel avanzado y soluciones de Business Intelligence.
 
-## 🚀 Tecnologías Utilizadas
+## �‍💼 Sobre Miguel
+
+- 🎯 **Specialist II Data for Deals** en PwC Spain (M&A)
+- 📊 **Power BI Data Analyst** en Bigrid 
+- 🎓 **Máster en Business Intelligence** - Universidad de la Rioja
+- 📈 **Grado en ADE** - Universidad de Granada
+
+## 🛠️ Tecnologías Utilizadas
 
 - **Next.js 16** - Framework de React para producción
-- **TypeScript** - Tipado estático para JavaScript
+- **TypeScript** - Tipado estático para JavaScript  
 - **Tailwind CSS** - Framework de CSS utilitario
-- **Framer Motion** - Librería de animaciones para React
 - **Lucide React** - Iconos modernos para React
 - **shadcn/ui** - Componentes de UI reutilizables
+- **Vercel** - Plataforma de despliegue
+
+## 💼 Habilidades Destacadas
+
+- **Power BI** (85%) - Dashboards y visualización
+- **Excel Avanzado** (100%) - Análisis de datos
+- **Alteryx** (90%) - ETL y procesamiento
+- **SQL** (60%) - Consultas y bases de datos
+- **Query** (95%) - Business Intelligence
+- **R Studio** (65%) - Análisis estadístico
+- **Knime** (70%) - Ciencia de datos
 
 ## 📦 Instalación
 
