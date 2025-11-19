@@ -1,0 +1,37 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0A84FF;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#5E5CE6;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Círculo base -->
+  <circle cx="100" cy="100" r="85" fill="url(#grad)"/>
+  
+  <!-- Borde interno en forma de C -->
+  <path d="M 175 100 A 75 75 0 1 1 25 100" 
+        stroke="white" 
+        stroke-width="8" 
+        fill="none" 
+        stroke-linecap="round"
+        opacity="0.25"/>
+  
+  <!-- Forma abstracta: barras ascendentes que forman una M -->
+  <g transform="translate(100, 100)">
+    <!-- Barra izquierda -->
+    <rect x="-45" y="-15" width="12" height="45" rx="6" fill="white" opacity="0.95"/>
+    
+    <!-- Barra centro-izquierda -->
+    <rect x="-25" y="-28" width="12" height="58" rx="6" fill="white" opacity="0.95"/>
+    
+    <!-- Barra centro-derecha -->
+    <rect x="-5" y="-35" width="12" height="65" rx="6" fill="white" opacity="0.95"/>
+    
+    <!-- Barra derecha -->
+    <rect x="15" y="-42" width="12" height="72" rx="6" fill="white" opacity="0.95"/>
+    
+    <!-- Barra final (acento) -->
+    <rect x="35" y="-25" width="12" height="55" rx="6" fill="white" opacity="0.75"/>
+  </g>
+</svg>
