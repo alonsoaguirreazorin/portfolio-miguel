@@ -30,14 +30,23 @@ export default function HomePage() {
                 </p>
               </div>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" className="bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600">
-                  <Mail className="w-4 h-4 mr-2" />
-                  miguelcasares01@gmail.com
-                </Button>
-                <Button variant="outline" size="lg" className="border-purple-500/30 text-purple-300 hover:bg-purple-500/10">
-                  <User className="w-4 h-4 mr-2" />
-                  Ver LinkedIn
-                </Button>
+                <a href="mailto:miguelcasares01@gmail.com" aria-label="Enviar email a Miguel Casares">
+                  <Button size="lg" className="bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600">
+                    <Mail className="w-4 h-4 mr-2" />
+                    miguelcasares01@gmail.com
+                  </Button>
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/miguelcasares/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Abrir perfil de LinkedIn de Miguel Casares"
+                >
+                  <Button variant="outline" size="lg" className="border-purple-500/30 text-purple-400 hover:bg-purple-500/10">
+                    <User className="w-4 h-4 mr-2" />
+                    Ver LinkedIn
+                  </Button>
+                </a>
               </div>
             </div>
             <div className="relative">
@@ -146,10 +155,13 @@ export default function HomePage() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <Card className="bg-white/5 backdrop-blur-lg border-white/10 hover:bg-white/10 overflow-hidden">
-              <div className="aspect-video bg-gradient-to-br from-blue-500/20 to-cyan-500/20 relative">
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <Briefcase className="w-12 h-12 text-blue-300" />
-                </div>
+              <div className="aspect-video bg-white rounded-t-lg relative overflow-hidden">
+                <Image
+                  src="/img/pwc.webp" 
+                  alt="PwC Logo"
+                  fill
+                  className="object-contain"
+                />
               </div>
               <CardContent className="p-6 space-y-4">
                 <h3 className="text-xl font-semibold text-white">Data for Deals - PwC Spain</h3>
@@ -177,10 +189,13 @@ export default function HomePage() {
             </Card>
 
             <Card className="bg-white/5 backdrop-blur-lg border-white/10 hover:bg-white/10 overflow-hidden">
-              <div className="aspect-video bg-gradient-to-br from-green-500/20 to-emerald-500/20 relative">
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <Code className="w-12 h-12 text-green-300" />
-                </div>
+              <div className="aspect-video bg-white rounded-t-lg relative overflow-hidden">
+                <Image
+                  src="/img/bigrid.webp" 
+                  alt="Bigrid Logo"
+                  fill
+                  className="object-cover"
+                />
               </div>
               <CardContent className="p-6 space-y-4">
                 <h3 className="text-xl font-semibold text-white">Power BI Data Analyst - Bigrid</h3>
@@ -208,10 +223,13 @@ export default function HomePage() {
             </Card>
 
             <Card className="bg-white/5 backdrop-blur-lg border-white/10 hover:bg-white/10 overflow-hidden">
-              <div className="aspect-video bg-gradient-to-br from-purple-500/20 to-blue-500/20 relative">
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <GraduationCap className="w-12 h-12 text-purple-300" />
-                </div>
+              <div className="aspect-video bg-white rounded-t-lg relative overflow-hidden">
+                <Image
+                  src="/img/kiron.webp" 
+                  alt="Kiron Partner Logo"
+                  fill
+                  className="object-contain"
+                />
               </div>
               <CardContent className="p-6 space-y-4">
                 <h3 className="text-xl font-semibold text-white">Asesor Financiero - Kiron Partner</h3>
@@ -239,10 +257,13 @@ export default function HomePage() {
             </Card>
 
             <Card className="bg-white/5 backdrop-blur-lg border-white/10 hover:bg-white/10 overflow-hidden">
-              <div className="aspect-video bg-gradient-to-br from-orange-500/20 to-red-500/20 relative">
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <User className="w-12 h-12 text-orange-300" />
-                </div>
+              <div className="aspect-video bg-white rounded-t-lg relative overflow-hidden">
+                <Image
+                  src="/img/diputacion.webp" 
+                  alt="Diputación Granada Logo"
+                  fill
+                  className="object-contain"
+                />
               </div>
               <CardContent className="p-6 space-y-4">
                 <h3 className="text-xl font-semibold text-white">Técnico Administrativo - Diputación Granada</h3>
@@ -270,10 +291,13 @@ export default function HomePage() {
             </Card>
 
             <Card className="bg-white/5 backdrop-blur-lg border-white/10 hover:bg-white/10 overflow-hidden">
-              <div className="aspect-video bg-gradient-to-br from-cyan-500/20 to-blue-500/20 relative">
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <GraduationCap className="w-12 h-12 text-cyan-300" />
-                </div>
+              <div className="aspect-video bg-white rounded-t-lg relative overflow-hidden">
+                <Image
+                  src="/img/universidadlarioja.webp" 
+                  alt="Universidad de la Rioja Logo"
+                  fill
+                  className="object-contain"
+                />
               </div>
               <CardContent className="p-6 space-y-4">
                 <h3 className="text-xl font-semibold text-white">Máster Business Intelligence</h3>
@@ -301,10 +325,13 @@ export default function HomePage() {
             </Card>
 
             <Card className="bg-white/5 backdrop-blur-lg border-white/10 hover:bg-white/10 overflow-hidden">
-              <div className="aspect-video bg-gradient-to-br from-pink-500/20 to-purple-500/20 relative">
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <Code className="w-12 h-12 text-pink-300" />
-                </div>
+              <div className="aspect-video bg-white rounded-t-lg relative overflow-hidden">
+                <Image
+                  src="/img/ugr.webp" 
+                  alt="Universidad de Granada Logo"
+                  fill
+                  className="object-cover"
+                />
               </div>
               <CardContent className="p-6 space-y-4">
                 <h3 className="text-xl font-semibold text-white">Grado ADE - Universidad de Granada</h3>

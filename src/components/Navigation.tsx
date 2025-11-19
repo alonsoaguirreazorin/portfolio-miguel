@@ -24,7 +24,7 @@ export default function Navigation() {
           <Link href="/" className="flex items-center space-x-3 group cursor-pointer">
             <Image src="/logo.svg" alt="Miguel Casares Logo" width={50} height={50} />
             <div className="flex flex-col">
-              <span className="font-bold text-xl text-white group-hover:text-purple-300 transition-colors duration-300">Miguel Casares</span>
+              <span className="font-bold text-xl text-white group-hover:text-purple-300 transition-colors duration-300">Miguel Casares Moreno</span>
               <span className="text-xs text-gray-400 font-medium tracking-wide">Business Analyst & Data Analytics</span>
             </div>
           </Link>
