@@ -1,5 +1,6 @@
 'use client'
 
+import { use } from "react"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
@@ -10,116 +11,91 @@ import { notFound } from "next/navigation"
 const projects = [
   {
     id: 1,
-    title: "Dashboard de Análisis de Ventas",
-    description: "Dashboard interactivo desarrollado en Power BI para el análisis integral de ventas de una empresa retail. El proyecto incluye visualizaciones dinámicas que permiten analizar tendencias de ventas por período, región y producto, métricas de rendimiento en tiempo real, y predicciones de ventas futuras basadas en datos históricos.",
-    technologies: ["Power BI", "SQL", "Python", "Excel"],
-    videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    title: "Northwind Traders – Operational Performance Dashboard",
+    description: "Dashboard analítico desarrollado a partir del dataset ficticio Northwind Traders, con el objetivo de evaluar el rendimiento operativo de la empresa y demostrar procesos completos de ETL, modelado y visualización en Power BI.",
+    technologies: ["Power BI", "SQL", "KNIME", "DAX", "ETL"],
+    videoUrl: "/videos/Proyecto-NortwindTraders.mp4",
     details: {
-      objetivo: "Crear una solución de business intelligence que permita a los gerentes de ventas tomar decisiones informadas basadas en datos en tiempo real.",
-      resultados: [
-        "Reducción del 30% en el tiempo de generación de reportes",
-        "Mejora del 25% en la precisión de predicciones de ventas",
-        "Identificación de patrones de ventas que resultaron en un aumento del 15% en ingresos"
+      objetivo: "Demostrar procesos completos de ETL, modelado y visualización en Power BI a partir del dataset Northwind Traders para evaluar el rendimiento operativo empresarial.",
+      proceso: [
+        "Obtención de los datos en formato CSV/SQL desde repositorios públicos",
+        "Limpieza y transformación mediante un flujo ETL construido en SQL y KNIME",
+        "Modelado dimensional en Power BI con tablas de Clientes, Empleados, Pedidos y Productos",
+        "Creación de relaciones y medidas DAX orientadas al análisis operativo"
       ],
-      duracion: "3 meses",
-      equipo: "Business Analyst, Data Engineer, Stakeholders de Ventas"
+      contenido: [
+        "Clientes: distribución geográfica, principales cuentas y volumen de pedidos",
+        "Empleados: organigrama, roles y rendimiento general",
+        "Pedidos: evolución temporal, eficiencia y patrones de demanda",
+        "Productos: catálogo, categorías, precios y análisis de ventas"
+      ],
+      valor: "Transformar datos dispersos en indicadores clave que permiten comprender la actividad operativa, reforzando habilidades de ingeniería de datos, modelado y reporting profesional.",
+      duracion: "2 meses",
+      categoria: "Business Intelligence & Analytics"
     }
   },
   {
     id: 2,
-    title: "Sistema de Gestión de Inventario",
-    description: "Aplicación web completa desarrollada para la gestión optimizada de inventario con capacidades de predicción de demanda. El sistema integra algoritmos de machine learning para predecir la demanda futura y optimizar los niveles de stock, reduciendo costos de almacenamiento y evitando agotamientos de productos.",
-    technologies: ["React", "Node.js", "MongoDB", "Chart.js"],
-    videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    title: "Adventure Works – Corporate Analytics Dashboard",
+    description: "Dashboard corporativo creado a partir del dataset estándar Adventure Works. Su objetivo es ofrecer una visión integral del rendimiento empresarial, abarcando ventas, clientes, productos y operaciones.",
+    technologies: ["Power BI", "Power Query", "SQL", "KPIs", "Business Intelligence"],
+    videoUrl: "/videos/Proyecto-AdventuresWork.mp4",
     details: {
-      objetivo: "Desarrollar un sistema inteligente de gestión de inventario que optimice los niveles de stock y reduzca costos operativos.",
-      resultados: [
-        "Reducción del 40% en costos de almacenamiento",
-        "Disminución del 50% en agotamientos de productos",
-        "Automatización del 80% de las tareas de reposición"
+      objetivo: "Ofrecer una visión integral del rendimiento empresarial mediante un dashboard corporativo que abarque ventas, clientes, productos y operaciones.",
+      proceso: [
+        "Integración de tablas relacionadas con ventas, territorio, productos, inventario y clientes",
+        "Limpieza y estandarización del dato mediante Power Query y SQL",
+        "Construcción de un modelo analítico con dimensiones geográficas, comerciales y productivas",
+        "Implementación de KPIs y paneles comparativos para análisis de rendimiento"
       ],
-      duracion: "6 meses",
-      equipo: "Full-stack Developer, Data Scientist, Supply Chain Manager"
+      contenido: [
+        "Ventas: tendencias por región, periodo, canal y categoría",
+        "Clientes: segmentación, comportamiento de compra y fidelidad",
+        "Productos: rentabilidad, rotación, disponibilidad e inventario",
+        "Operaciones: eficiencia productiva y análisis de la cadena logística"
+      ],
+      valor: "Permite evaluar la empresa desde una perspectiva 360º, ofreciendo métricas estratégicas para la toma de decisiones y demostrando experiencia en modelos complejos y escalables de BI.",
+      duracion: "3 meses",
+      categoria: "Corporate Business Intelligence"
     }
   },
   {
     id: 3,
-    title: "Automatización de Reportes",
-    description: "Sistema automatizado para la generación de reportes ejecutivos que integra múltiples fuentes de datos corporativas. La solución elimina el trabajo manual de recopilación y procesamiento de datos, generando reportes consistentes y actualizados automáticamente con una frecuencia configurable.",
-    technologies: ["Python", "Pandas", "Matplotlib", "API Rest"],
-    videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    title: "Imperial Brands – Altadis: Sistema Integral de Business Intelligence",
+    description: "Sistema de BI desarrollado como Trabajo Final de Máster (UNIR), diseñado para la compañía Altadis (Imperial Brands). El objetivo es construir un entorno integral de analítica que abarque la cadena logística, ventas y predicción de roturas.",
+    technologies: ["R", "RStudio", "Power BI", "Data Warehouse", "Clustering", "Predicción"],
+    videoUrl: "/videos/Proyecto-ImperialBrands.mp4",
     details: {
-      objetivo: "Automatizar la generación de reportes ejecutivos para mejorar la eficiencia operativa y garantizar la consistencia de la información.",
-      resultados: [
-        "Ahorro de 20 horas semanales en generación manual de reportes",
-        "Mejora del 95% en la consistencia de datos reportados",
-        "Reducción del tiempo de entrega de reportes de 3 días a tiempo real"
+      objetivo: "Construir un sistema completo de Business Intelligence para Altadis (Imperial Brands), desde el dato bruto hasta la toma de decisiones, integrando ingeniería de datos, analítica y visualización profesional.",
+      proceso: [
+        "Integración y calidad del dato (R / RStudio): Unificación de 7+ fuentes, limpieza, estandarización y detección de anomalías",
+        "Data Warehouse: Construcción de un modelo en estrella con hechos de Ventas, Envíos, Rutas y Roturas de Stock",
+        "Power BI Reporting: Modelado semántico, medidas avanzadas, mapas, análisis temporales y paneles ejecutivos",
+        "Analítica avanzada: Segmentación por clustering y predicción orientada a anticipar roturas de stock"
       ],
-      duracion: "4 meses",
-      equipo: "Python Developer, Business Analyst, IT Infrastructure"
-    }
-  },
-  {
-    id: 4,
-    title: "Análisis Predictivo de Clientes",
-    description: "Modelo de machine learning desarrollado para predecir el comportamiento de clientes y optimizar estrategias de marketing. El sistema analiza patrones de compra, demografía y comportamiento para identificar clientes con alta probabilidad de conversión y personalizar las campañas de marketing.",
-    technologies: ["Python", "Scikit-learn", "Tableau", "SQL"],
-    videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-    details: {
-      objetivo: "Desarrollar un modelo predictivo que permita personalizar estrategias de marketing y mejorar las tasas de conversión.",
-      resultados: [
-        "Incremento del 35% en tasas de conversión de campañas",
-        "Reducción del 25% en costos de marketing por cliente adquirido",
-        "Identificación del 90% de clientes de alto valor con precisión"
+      contenido: [
+        "Ventas: KPIs comerciales, evolución y análisis por distribuidor",
+        "Logística: eficiencia de rutas, tiempos de entrega y costes",
+        "Predicción: probabilidad de quiebres de stock y patrones críticos",
+        "Segmentación: clusters de clientes/distribuidores basados en comportamiento",
+        "Storytelling visual: mapas, tendencias y paneles estratégicos"
       ],
-      duracion: "5 meses",
-      equipo: "Data Scientist, Marketing Manager, Database Administrator"
-    }
-  },
-  {
-    id: 5,
-    title: "Portal de Business Intelligence",
-    description: "Portal centralizado de Business Intelligence desarrollado en Power BI con integración a Azure, diseñado para proporcionar dashboards personalizados para diferentes áreas de la empresa. La solución incluye métricas específicas para cada departamento y capacidades de drill-down para análisis detallados.",
-    technologies: ["Power BI", "Azure", "SQL Server", "DAX"],
-    videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-    details: {
-      objetivo: "Crear un portal único de BI que centralice todas las métricas empresariales y facilite la toma de decisiones basada en datos.",
-      resultados: [
-        "Centralización de 15 dashboards departamentales",
-        "Mejora del 50% en velocidad de acceso a métricas críticas",
-        "Adopción del 95% por parte de gerentes y directores"
-      ],
-      duracion: "8 meses",
-      equipo: "BI Developer, Cloud Architect, Department Heads"
-    }
-  },
-  {
-    id: 6,
-    title: "Optimización de Procesos",
-    description: "Proyecto integral de análisis y rediseño de procesos empresariales utilizando técnicas de process mining y metodologías Lean. El proyecto identificó cuellos de botella, eliminó actividades que no agregan valor y propuso mejoras operativas que resultaron en significativas eficiencias.",
-    technologies: ["Process Mining", "Visio", "Excel", "R"],
-    videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-    details: {
-      objetivo: "Analizar y optimizar los procesos empresariales críticos para mejorar la eficiencia operativa y reducir costos.",
-      resultados: [
-        "Reducción del 45% en tiempo de procesamiento de órdenes",
-        "Eliminación del 30% de actividades que no agregan valor",
-        "Ahorro anual de $500,000 en costos operativos"
-      ],
+      valor: "Demuestra la capacidad de construir un sistema completo de Business Intelligence, desde el dato bruto hasta la toma de decisiones, integrando ingeniería de datos, analítica y visualización profesional.",
       duracion: "6 meses",
-      equipo: "Process Analyst, Operations Manager, IT Support"
+      categoria: "Trabajo Final de Máster - Sistema Integral BI"
     }
   }
 ]
 
 interface PageProps {
-  params: {
+  params: Promise<{
     id: string
-  }
+  }>
 }
 
 export default function ProyectoPage({ params }: PageProps) {
-  const projectId = parseInt(params.id)
+  const { id } = use(params)
+  const projectId = parseInt(id)
   const project = projects.find(p => p.id === projectId)
 
   if (!project) {
@@ -196,29 +172,60 @@ export default function ProyectoPage({ params }: PageProps) {
                     <span className="text-gray-300">{project.details.duracion}</span>
                   </div>
                   <div>
-                    <span className="text-purple-300 font-medium">Equipo: </span>
-                    <span className="text-gray-300">{project.details.equipo}</span>
+                    <span className="text-purple-300 font-medium">Categoría: </span>
+                    <span className="text-gray-300">{project.details.categoria}</span>
                   </div>
                 </div>
               </CardContent>
             </Card>
           </div>
 
-          {/* Results */}
-          <Card className="bg-white/5 backdrop-blur-sm border-white/10 mb-12">
-            <CardContent className="p-6">
-              <h3 className="text-2xl font-bold text-white mb-6">Resultados Obtenidos</h3>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                {project.details.resultados.map((resultado, index) => (
-                  <div key={index} className="bg-gradient-to-br from-purple-600/10 to-blue-600/10 p-4 rounded-lg border border-purple-500/20">
-                    <p className="text-gray-300 text-center font-medium">
-                      {resultado}
-                    </p>
-                  </div>
-                ))}
-              </div>
-            </CardContent>
-          </Card>
+          {/* Detailed Information */}
+          <div className="space-y-8 mb-12">
+            <Card className="bg-white/5 backdrop-blur-sm border-white/10">
+              <CardContent className="p-6">
+                <h3 className="text-xl font-bold text-white mb-4">Objetivo del Proyecto</h3>
+                <p className="text-gray-300 leading-relaxed">{project.details.objetivo}</p>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-white/5 backdrop-blur-sm border-white/10">
+              <CardContent className="p-6">
+                <h3 className="text-xl font-bold text-white mb-4">Proceso de Desarrollo</h3>
+                <div className="space-y-3">
+                  {project.details.proceso.map((paso, index) => (
+                    <div key={index} className="flex items-start space-x-3">
+                      <div className="w-6 h-6 rounded-full bg-blue-500/20 flex items-center justify-center mt-1">
+                        <span className="text-blue-400 text-sm font-medium">{index + 1}</span>
+                      </div>
+                      <p className="text-gray-300">{paso}</p>
+                    </div>
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-white/5 backdrop-blur-sm border-white/10">
+              <CardContent className="p-6">
+                <h3 className="text-xl font-bold text-white mb-4">Contenido Desarrollado</h3>
+                <div className="space-y-2">
+                  {project.details.contenido.map((item, index) => (
+                    <div key={index} className="flex items-center space-x-3">
+                      <div className="w-2 h-2 rounded-full bg-blue-400"></div>
+                      <p className="text-gray-300">{item}</p>
+                    </div>
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-white/5 backdrop-blur-sm border-white/10">
+              <CardContent className="p-6">
+                <h3 className="text-xl font-bold text-white mb-4">Valor Aportado</h3>
+                <p className="text-gray-300 leading-relaxed">{project.details.valor}</p>
+              </CardContent>
+            </Card>
+          </div>
 
           {/* Actions */}
           <div className="flex flex-col sm:flex-row gap-4">

@@ -1,46 +1,32 @@
 'use client'
 
+import Image from "next/image"
 import { Badge } from "@/components/ui/badge"
 import { Card, CardContent } from "@/components/ui/card"
-import { Code, ArrowLeft, ExternalLink } from "lucide-react"
+import { ArrowLeft, ExternalLink } from "lucide-react"
 import Link from "next/link"
 
 const projects = [
   {
     id: 1,
-    title: "Dashboard de Análisis de Ventas",
-    description: "Dashboard interactivo para análisis de ventas con visualizaciones dinámicas y métricas en tiempo real.",
-    technologies: ["Power BI", "SQL", "Python", "Excel"]
+    title: "Northwind Traders – Operational Performance Dashboard",
+    description: "Dashboard analítico desarrollado a partir del dataset ficticio Northwind Traders, con el objetivo de evaluar el rendimiento operativo de la empresa y demostrar procesos completos de ETL, modelado y visualización en Power BI.",
+    technologies: ["Power BI", "SQL", "KNIME", "DAX", "ETL"],
+    image: "/img/proyecto-northwindTraders.png"
   },
   {
     id: 2,
-    title: "Sistema de Gestión de Inventario",
-    description: "Aplicación web para gestión de inventario con predicciones de demanda y optimización de stock.",
-    technologies: ["React", "Node.js", "MongoDB", "Chart.js"]
+    title: "Adventure Works – Corporate Analytics Dashboard",
+    description: "Dashboard corporativo creado a partir del dataset estándar Adventure Works. Su objetivo es ofrecer una visión integral del rendimiento empresarial, abarcando ventas, clientes, productos y operaciones.",
+    technologies: ["Power BI", "Power Query", "SQL", "KPIs", "Business Intelligence"],
+    image: "/img/proyecto-AdventureWorks.png"
   },
   {
     id: 3,
-    title: "Automatización de Reportes",
-    description: "Sistema automatizado para generación de reportes ejecutivos con integración de múltiples fuentes de datos.",
-    technologies: ["Python", "Pandas", "Matplotlib", "API Rest"]
-  },
-  {
-    id: 4,
-    title: "Análisis Predictivo de Clientes",
-    description: "Modelo de machine learning para predecir comportamiento de clientes y optimizar estrategias de marketing.",
-    technologies: ["Python", "Scikit-learn", "Tableau", "SQL"]
-  },
-  {
-    id: 5,
-    title: "Portal de Business Intelligence",
-    description: "Portal centralizado de BI con dashboards personalizados para diferentes áreas de la empresa.",
-    technologies: ["Power BI", "Azure", "SQL Server", "DAX"]
-  },
-  {
-    id: 6,
-    title: "Optimización de Procesos",
-    description: "Análisis y rediseño de procesos empresariales con implementación de mejoras operativas.",
-    technologies: ["Process Mining", "Visio", "Excel", "R"]
+    title: "Imperial Brands – Altadis: Sistema Integral de Business Intelligence",
+    description: "Sistema de BI desarrollado como Trabajo Final de Máster (UNIR), diseñado para la compañía Altadis (Imperial Brands). El objetivo es construir un entorno integral de analítica que abarque la cadena logística, ventas y predicción de roturas.",
+    technologies: ["R", "RStudio", "Power BI", "Data Warehouse", "Clustering", "Predicción"],
+    image: "/img/proyecto-ImperialBrands.png"
   }
 ]
 
@@ -73,11 +59,14 @@ export default function ProyectosPage() {
                   <Link href={`/proyectos/${project.id}`}>
                     <CardContent className="p-0">
                       {/* Project Image */}
-                      <div className="relative h-48 bg-gradient-to-br from-purple-600/20 to-blue-600/20 rounded-t-lg overflow-hidden">
+                      <div className="relative h-48 overflow-hidden rounded-t-lg">
+                        <Image 
+                          src={project.image}
+                          alt={project.title}
+                          fill
+                          className="object-cover group-hover:scale-105 transition-transform duration-300"
+                        />
                         <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-all duration-300" />
-                        <div className="absolute inset-0 flex items-center justify-center">
-                          <Code className="h-16 w-16 text-purple-300 opacity-50" />
-                        </div>
                       </div>
 
                       {/* Project Content */}
