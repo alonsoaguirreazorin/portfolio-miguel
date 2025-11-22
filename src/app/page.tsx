@@ -376,6 +376,56 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Blog Section */}
+      <section id="blog" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/30 to-blue-800/30">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <Badge variant="secondary" className="bg-purple-500/20 text-purple-300 border-purple-500/30 mb-4">
+              <GraduationCap className="w-3 h-3 mr-1" />
+              Blog de Power BI
+            </Badge>
+            <h2 className="text-4xl font-bold mb-6">
+              Artículos y <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">Conocimientos</span>
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Comparto mi experiencia en Power BI, análisis de datos y mejores prácticas para implementaciones exitosas en empresas.
+            </p>
+          </div>
+          
+          <div className="text-center">
+            <Card className="bg-white/5 border-white/10 hover:border-purple-400/50 transition-all duration-300 max-w-2xl mx-auto">
+              <CardContent className="p-8">
+                <h3 className="text-2xl font-bold mb-4 text-white">
+                  Últimos Artículos sobre Power BI
+                </h3>
+                <p className="text-gray-300 mb-6">
+                  Descubre consejos prácticos, estrategias de implementación y mejores prácticas para maximizar el valor de Power BI en tu organización.
+                </p>
+                <div className="flex flex-wrap justify-center gap-3 mb-6">
+                  <Badge variant="outline" className="border-purple-400/30 text-purple-300">
+                    Implementación
+                  </Badge>
+                  <Badge variant="outline" className="border-blue-400/30 text-blue-300">
+                    Costes
+                  </Badge>
+                  <Badge variant="outline" className="border-green-400/30 text-green-300">
+                    Mejores prácticas
+                  </Badge>
+                  <Badge variant="outline" className="border-yellow-400/30 text-yellow-300">
+                    Automatización
+                  </Badge>
+                </div>
+                <a href="/blog">
+                  <Button size="lg" className="bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600">
+                    Ver todos los artículos
+                  </Button>
+                </a>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
       {/* Skills Section */}
       <section id="skills" className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">

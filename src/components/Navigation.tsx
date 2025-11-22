@@ -14,6 +14,12 @@ export default function Navigation() {
     if (page === 'proyectos') {
       return pathname.startsWith('/proyectos')
     }
+    if (page === 'blog') {
+      return pathname.startsWith('/blog')
+    }
+    if (page === 'home' && pathname === '/') {
+      return true
+    }
     return false
   }
 
@@ -48,6 +54,12 @@ export default function Navigation() {
               className={`transition-colors ${isActive('proyectos') ? 'text-purple-400' : 'text-white hover:text-purple-400'}`}
             >
               Proyectos
+            </Link>
+            <Link 
+              href="/blog" 
+              className={`transition-colors ${isActive('blog') ? 'text-purple-400' : 'text-white hover:text-purple-400'}`}
+            >
+              Blog
             </Link>
             <Link 
               href="/#skills" 
@@ -102,6 +114,13 @@ export default function Navigation() {
                 onClick={() => setIsMenuOpen(false)}
               >
                 Proyectos
+              </Link>
+              <Link 
+                href="/blog" 
+                className={`block px-3 py-2 transition-colors ${isActive('blog') ? 'text-purple-400' : 'text-white hover:text-purple-400'}`}
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Blog
               </Link>
               <Link 
                 href="/#skills" 

@@ -1,11 +1,55 @@
 'use client'
 
+import { useState } from "react"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Mail, Phone, MapPin } from "lucide-react"
 
 export default function Contact() {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: ''
+  })
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }))
+  }
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault()
+    setIsSubmitting(true)
+    setSubmitStatus('idle')
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      })
+
+      if (response.ok) {
+        setSubmitStatus('success')
+        setFormData({ name: '', email: '', message: '' })
+      } else {
+        setSubmitStatus('error')
+      }
+    } catch (error) {
+      console.error('Error:', error)
+      setSubmitStatus('error')
+    } finally {
+      setIsSubmitting(false)
+    }
+  }
   return (
     <section className="relative py-24 px-4 sm:px-6 lg:px-8 overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       {/* Animated Background */}
@@ -67,7 +111,7 @@ export default function Contact() {
 
           <Card className="bg-white/5 backdrop-blur-lg border-white/10">
             <CardContent className="p-6">
-              <form className="space-y-6">
+              <form className="space-y-6" onSubmit={handleSubmit}>
                 <div className="space-y-4">
                   <div>
                     <label className="block text-sm font-medium text-gray-300 mb-2">
@@ -75,6 +119,10 @@ export default function Contact() {
                     </label>
                     <input
                       type="text"
+                      name="name"
+                      value={formData.name}
+                      onChange={handleInputChange}
+                      required
                       className="w-full px-4 py-2 bg-white/5 border border-white/10 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-purple-500"
                       placeholder="Tu nombre"
                     />
@@ -85,6 +133,10 @@ export default function Contact() {
                     </label>
                     <input
                       type="email"
+                      name="email"
+                      value={formData.email}
+                      onChange={handleInputChange}
+                      required
                       className="w-full px-4 py-2 bg-white/5 border border-white/10 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-purple-500"
                       placeholder="tu@email.com"
                     />
@@ -95,13 +147,38 @@ export default function Contact() {
                     </label>
                     <textarea
                       rows={4}
+                      name="message"
+                      value={formData.message}
+                      onChange={handleInputChange}
+                      required
                       className="w-full px-4 py-2 bg-white/5 border border-white/10 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-purple-500"
                       placeholder="Cuéntame sobre tu proyecto..."
                     />
                   </div>
                 </div>
-                <Button type="submit" className="w-full bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600">
-                  Enviar mensaje
+
+                {submitStatus === 'success' && (
+                  <div className="p-4 bg-green-500/20 border border-green-500/30 rounded-lg">
+                    <p className="text-green-300 text-center">
+                      ¡Mensaje enviado correctamente! Te responderé pronto.
+                    </p>
+                  </div>
+                )}
+
+                {submitStatus === 'error' && (
+                  <div className="p-4 bg-red-500/20 border border-red-500/30 rounded-lg">
+                    <p className="text-red-300 text-center">
+                      Hubo un error al enviar el mensaje. Inténtalo de nuevo.
+                    </p>
+                  </div>
+                )}
+
+                <Button 
+                  type="submit" 
+                  disabled={isSubmitting}
+                  className="w-full bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 disabled:opacity-50"
+                >
+                  {isSubmitting ? 'Enviando...' : 'Enviar mensaje'}
                 </Button>
               </form>
             </CardContent>
