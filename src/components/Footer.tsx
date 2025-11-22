@@ -20,7 +20,7 @@ export default function Footer() {
                 className="object-contain"
               />
             </div>
-            <span className="font-semibold text-white">Miguel Casares</span>
+            <span className="font-semibold text-white">Miguel Casares Moreno</span>
           </div>
           <div className="flex items-center space-x-4">
             <span className="text-gray-400">© {currentYear} Todos los derechos reservados</span>
