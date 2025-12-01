@@ -454,78 +454,94 @@ export default function HomePage() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <Card className="bg-white/5 backdrop-blur-lg border-white/10 hover:bg-white/10">
-              <CardContent className="p-6 text-center space-y-4">
-                <div className="w-16 h-16 mx-auto bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center">
-                  <Code className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-white">Visualización</h3>
-                <div className="space-y-2">
-                  <div className="flex justify-between text-sm text-gray-300">
-                    <span>Power BI</span>
-                    <span>85%</span>
+              <CardContent className="p-6 text-center space-y-4 h-full flex flex-col justify-between">
+                <div className="space-y-4">
+                  <div className="w-16 h-16 mx-auto bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center">
+                    <Code className="w-8 h-8 text-white" />
                   </div>
-                  <Badge variant="secondary" className="bg-yellow-500/20 text-yellow-300 border-yellow-500/30 w-full">Power BI - Dashboards</Badge>
+                  <h3 className="text-xl font-semibold text-white">Visualización</h3>
+                  <div className="space-y-2">
+                    <div className="flex justify-between text-sm text-gray-300">
+                      <span>Power BI</span>
+                      <span>85%</span>
+                    </div>
+                  </div>
                 </div>
+                <Badge variant="secondary" className="bg-yellow-500/20 text-yellow-300 border-yellow-500/30 w-full">Power BI - Dashboards</Badge>
               </CardContent>
             </Card>
 
             <Card className="bg-white/5 backdrop-blur-lg border-white/10 hover:bg-white/10">
-              <CardContent className="p-6 text-center space-y-4">
-                <div className="w-16 h-16 mx-auto bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center">
-                  <Briefcase className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-white">Análisis</h3>
-                <div className="space-y-2">
-                  <div className="flex justify-between text-sm text-gray-300">
-                    <span>Excel</span>
-                    <span>100%</span>
+              <CardContent className="p-6 text-center space-y-4 h-full flex flex-col justify-between">
+                <div className="space-y-4">
+                  <div className="w-16 h-16 mx-auto bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center">
+                    <Briefcase className="w-8 h-8 text-white" />
                   </div>
-                  <div className="flex justify-between text-sm text-gray-300">
-                    <span>Alteryx</span>
-                    <span>90%</span>
+                  <h3 className="text-xl font-semibold text-white">Análisis</h3>
+                  <div className="space-y-2">
+                    <div className="flex justify-between text-sm text-gray-300">
+                      <span>Excel</span>
+                      <span>100%</span>
+                    </div>
+                    <div className="flex justify-between text-sm text-gray-300">
+                      <span>Power Pivot</span>
+                      <span>95%</span>
+                    </div>
+                    <div className="flex justify-between text-sm text-gray-300">
+                      <span>Paquete Office</span>
+                      <span>100%</span>
+                    </div>
                   </div>
-                  <Badge variant="secondary" className="bg-green-500/20 text-green-300 border-green-500/30 w-full">ETL & Query</Badge>
                 </div>
+                <Badge variant="secondary" className="bg-green-500/20 text-green-300 border-green-500/30 w-full">Análisis & Reporting</Badge>
               </CardContent>
             </Card>
 
             <Card className="bg-white/5 backdrop-blur-lg border-white/10 hover:bg-white/10">
-              <CardContent className="p-6 text-center space-y-4">
-                <div className="w-16 h-16 mx-auto bg-gradient-to-r from-orange-500 to-red-500 rounded-lg flex items-center justify-center">
-                  <Code className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-white">Programación</h3>
-                <div className="space-y-2">
-                  <div className="flex justify-between text-sm text-gray-300">
-                    <span>SQL</span>
-                    <span>60%</span>
+              <CardContent className="p-6 text-center space-y-4 h-full flex flex-col justify-between">
+                <div className="space-y-4">
+                  <div className="w-16 h-16 mx-auto bg-gradient-to-r from-orange-500 to-red-500 rounded-lg flex items-center justify-center">
+                    <Code className="w-8 h-8 text-white" />
                   </div>
-                  <div className="flex justify-between text-sm text-gray-300">
-                    <span>R Studio</span>
-                    <span>65%</span>
+                  <h3 className="text-xl font-semibold text-white">Programación</h3>
+                  <div className="space-y-2">
+                    <div className="flex justify-between text-sm text-gray-300">
+                      <span>SQL</span>
+                      <span>60%</span>
+                    </div>
+                    <div className="flex justify-between text-sm text-gray-300">
+                      <span>R Studio</span>
+                      <span>65%</span>
+                    </div>
                   </div>
-                  <Badge variant="secondary" className="bg-blue-500/20 text-blue-300 border-blue-500/30 w-full">Modelado Datos</Badge>
                 </div>
+                <Badge variant="secondary" className="bg-blue-500/20 text-blue-300 border-blue-500/30 w-full">Modelado Datos</Badge>
               </CardContent>
             </Card>
 
             <Card className="bg-white/5 backdrop-blur-lg border-white/10 hover:bg-white/10">
-              <CardContent className="p-6 text-center space-y-4">
-                <div className="w-16 h-16 mx-auto bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center">
-                  <GraduationCap className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-white">Herramientas</h3>
-                <div className="space-y-2">
-                  <div className="flex justify-between text-sm text-gray-300">
-                    <span>Query</span>
-                    <span>95%</span>
+              <CardContent className="p-6 text-center space-y-4 h-full flex flex-col justify-between">
+                <div className="space-y-4">
+                  <div className="w-16 h-16 mx-auto bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center">
+                    <GraduationCap className="w-8 h-8 text-white" />
                   </div>
-                  <div className="flex justify-between text-sm text-gray-300">
-                    <span>Knime</span>
-                    <span>70%</span>
+                  <h3 className="text-xl font-semibold text-white">ETL</h3>
+                  <div className="space-y-2">
+                    <div className="flex justify-between text-sm text-gray-300">
+                      <span>Alteryx</span>
+                      <span>90%</span>
+                    </div>
+                    <div className="flex justify-between text-sm text-gray-300">
+                      <span>Query</span>
+                      <span>95%</span>
+                    </div>
+                    <div className="flex justify-between text-sm text-gray-300">
+                      <span>Knime</span>
+                      <span>70%</span>
+                    </div>
                   </div>
-                  <Badge variant="secondary" className="bg-purple-500/20 text-purple-300 border-purple-500/30 w-full">Business Intelligence</Badge>
                 </div>
+                <Badge variant="secondary" className="bg-purple-500/20 text-purple-300 border-purple-500/30 w-full">Extracción y Transformación</Badge>
               </CardContent>
             </Card>
           </div>
