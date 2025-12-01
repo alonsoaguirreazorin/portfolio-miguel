@@ -28,8 +28,8 @@ export default function BlogPage() {
       <div className="max-w-7xl mx-auto px-4 py-24">
         {/* Header */}
         <div className="text-center mb-20">
-          <h1 className="text-5xl font-bold mt-8 mb-8 leading-tight bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-            Blog de Power BI y Analytics
+          <h1 className="text-3xl lg:text-5xl font-bold mt-8 mb-8 leading-tight bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+            Artículos y Conocimientos
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
             Artículos especializados sobre implementación, mejores prácticas y estrategias de Power BI para empresas.

@@ -65,10 +65,10 @@ export default function Contact() {
             Contacto
           </Badge>
           <h2 className="text-3xl lg:text-5xl font-bold mb-6 text-white">
-            Trabajemos juntos
+            Conversemos
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            ¿Tienes un proyecto en mente? Me encantaría escuchar tus ideas y ayudarte a hacerlas realidad.
+            ¿Interesado en explorar nuevas oportunidades? Siempre estoy abierto a escuchar propuestas interesantes y conocer proyectos innovadores.
           </p>
         </div>
 
@@ -152,7 +152,7 @@ export default function Contact() {
                       onChange={handleInputChange}
                       required
                       className="w-full px-4 py-2 bg-white/5 border border-white/10 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-purple-500"
-                      placeholder="Cuéntame sobre tu proyecto..."
+                      placeholder="Cuéntame qué tienes en mente..."
                     />
                   </div>
                 </div>
