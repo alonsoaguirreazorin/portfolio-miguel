@@ -1,10 +1,20 @@
-'use client'
-
 import Image from "next/image"
 import { Badge } from "@/components/ui/badge"
 import { Card, CardContent } from "@/components/ui/card"
 import { ArrowLeft, ExternalLink } from "lucide-react"
 import Link from "next/link"
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "Proyectos - Miguel Casares | Power BI & Business Intelligence",
+  description: "Portfolio de proyectos de Business Intelligence y análisis de datos. Dashboards desarrollados con Power BI, SQL y herramientas de ETL. Casos de estudio de Northwind Traders, Adventure Works e Imperial Brands.",
+  keywords: ["Proyectos Power BI", "Dashboard Business Intelligence", "Northwind Traders", "Adventure Works", "Imperial Brands", "ETL", "SQL", "Data Analytics", "Casos de estudio BI"],
+  openGraph: {
+    title: "Proyectos - Miguel Casares | Power BI & Business Intelligence",
+    description: "Portfolio de proyectos de Business Intelligence y análisis de datos desarrollados por Miguel Casares.",
+    images: ['/img/proyecto-northwindTraders.png'],
+  },
+};
 
 const projects = [
   {

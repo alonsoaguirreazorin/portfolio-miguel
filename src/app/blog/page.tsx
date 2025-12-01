@@ -7,13 +7,20 @@ import type { Metadata } from "next";
 import QuickShare from "@/components/QuickShare";
 
 export const metadata: Metadata = {
-  title: "Blog de Power BI y Analytics - Miguel Casares",
-  description: "Artículos especializados sobre implementación, mejores prácticas y estrategias de Power BI para empresas. Consejos de un experto en Business Intelligence.",
-  keywords: "Power BI, Business Intelligence, Analytics, Dashboards, Implementación, Consultoría",
+  title: "Artículos y Conocimientos - Miguel Casares | Blog de Power BI y Analytics",
+  description: "Blog especializado en Power BI, Business Intelligence y análisis de datos. Artículos técnicos sobre implementación, mejores prácticas y estrategias empresariales de BI.",
+  keywords: ["Blog Power BI", "Artículos Business Intelligence", "Análisis de datos", "Implementación Power BI", "DAX", "Dashboard", "KPIs", "Mejores prácticas BI", "Miguel Casares"],
   openGraph: {
     title: "Blog de Power BI y Analytics - Miguel Casares",
-    description: "Artículos especializados sobre implementación, mejores prácticas y estrategias de Power BI para empresas.",
+    description: "Blog especializado en Power BI, Business Intelligence y análisis de datos. Artículos técnicos y casos de estudio.",
     type: "website",
+    images: ['/miguelCasaresProfile.png'],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: "Blog de Power BI y Analytics - Miguel Casares",
+    description: "Blog especializado en Power BI, Business Intelligence y análisis de datos.",
+    images: ['/miguelCasaresProfile.png'],
   },
 };
 

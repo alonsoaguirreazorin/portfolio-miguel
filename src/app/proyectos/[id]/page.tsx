@@ -1,12 +1,34 @@
-'use client'
-
-import { use } from "react"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { ArrowLeft, ExternalLink } from "lucide-react"
 import Link from "next/link"
 import { notFound } from "next/navigation"
+import type { Metadata } from "next"
+
+// Generate metadata for each project
+export async function generateMetadata({ params }: { params: Promise<{ id: string }> }): Promise<Metadata> {
+  const resolvedParams = await params;
+  const id = parseInt(resolvedParams.id);
+  const project = projects.find(p => p.id === id);
+
+  if (!project) {
+    return {
+      title: 'Proyecto no encontrado',
+    };
+  }
+
+  return {
+    title: `${project.title} - Miguel Casares`,
+    description: project.description,
+    keywords: [...project.technologies, "Miguel Casares", "Power BI", "Business Intelligence", "Analytics"],
+    openGraph: {
+      title: project.title,
+      description: project.description,
+      images: [project.videoUrl ? `/img/proyecto-${project.title.split(' ')[0].toLowerCase()}.png` : '/miguelCasaresProfile.png'],
+    },
+  };
+}
 
 const projects = [
   {
@@ -93,10 +115,10 @@ interface PageProps {
   }>
 }
 
-export default function ProyectoPage({ params }: PageProps) {
-  const { id } = use(params)
-  const projectId = parseInt(id)
-  const project = projects.find(p => p.id === projectId)
+export default async function ProyectoPage({ params }: PageProps) {
+  const resolvedParams = await params;
+  const projectId = parseInt(resolvedParams.id);
+  const project = projects.find(p => p.id === projectId);
 
   if (!project) {
     notFound()

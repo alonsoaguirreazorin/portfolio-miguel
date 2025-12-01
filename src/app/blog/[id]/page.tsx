@@ -181,19 +181,48 @@ function renderMarkdown(content: string) {
 export default async function BlogPostPage({ params }: BlogPostPageProps) {
   const { id } = await params;
   const post = getBlogPost(id);
-  
+
   if (!post) {
     notFound();
   }
 
-  // Obtener posts relacionados (misma categoría)
+  // Generate Article Schema for SEO
+  const articleSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: post.title,
+    description: post.excerpt,
+    author: {
+      '@type': 'Person',
+      name: 'Miguel Casares Moreno',
+      url: 'https://portfolio-miguel.vercel.app',
+    },
+    publisher: {
+      '@type': 'Person',
+      name: 'Miguel Casares Moreno',
+    },
+    datePublished: post.date,
+    dateModified: post.date,
+    articleSection: post.category,
+    keywords: post.tags.join(', '),
+    url: `https://portfolio-miguel.vercel.app/blog/${post.id}`,
+    image: 'https://portfolio-miguel.vercel.app/miguelCasaresProfile.png',
+    inLanguage: 'es-ES',
+  };  // Obtener posts relacionados (misma categoría)
   const allPosts = getAllBlogPosts();
   const relatedPosts = allPosts
     .filter(p => p.category === post.category && p.id !== post.id)
     .slice(0, 3);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(articleSchema),
+        }}
+      />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
       <div className="container mx-auto px-4 py-24 max-w-4xl">
         {/* Back button */}
         <Link href="/blog">
@@ -295,5 +324,6 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         </section>
       </div>
     </div>
+    </>
   );
 }

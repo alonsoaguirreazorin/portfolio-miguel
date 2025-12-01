@@ -1,10 +1,20 @@
-'use client'
-
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Mail, Calendar, User, Code, Briefcase, GraduationCap } from "lucide-react"
 import Image from "next/image"
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "Miguel Casares - Business Analyst & Data Analytics Specialist en Granada",
+  description: "Portfolio profesional de Miguel Casares, especialista en Power BI, análisis de datos y Business Intelligence en Granada. Experiencia en dashboards, KPIs y transformación digital empresarial.",
+  keywords: ["Miguel Casares Granada", "Power BI Granada", "Business Analyst Granada", "Data Analytics Granada", "Business Intelligence Granada", "Consultor datos Granada", "Dashboard Power BI", "KPIs empresariales"],
+  openGraph: {
+    title: "Miguel Casares - Business Analyst & Data Analytics Specialist",
+    description: "Portfolio profesional de Miguel Casares, especialista en Power BI, análisis de datos y Business Intelligence en Granada.",
+    images: ['/miguelCasaresProfile.png'],
+  },
+};
 
 export default function HomePage() {
   return (
