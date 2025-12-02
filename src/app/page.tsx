@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Miguel Casares - Business Analyst & Data Analytics Specialist",
     description: "Portfolio profesional de Miguel Casares, especialista en Power BI, análisis de datos y Business Intelligence en Granada.",
-    images: ['/miguelCasaresProfile.png'],
+    images: ['/miguelCasaresProfile.jpg'],
   },
 };
 
